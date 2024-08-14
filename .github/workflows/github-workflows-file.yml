@@ -13,6 +13,8 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
+    environment: CoffeeAPI 
+
     defaults:
       run:
         working-directory: ./infra
@@ -40,6 +42,4 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push' 
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
