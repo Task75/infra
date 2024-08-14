@@ -6,7 +6,7 @@ resource "github_repository" "coffee_api" {
   visibility  = "public"
   has_issues  = true
   has_wiki    = true
-  auto_init   = false
+  auto_init   = true
 }
 
 # Create the env/staging branch as the first branch in the repository
