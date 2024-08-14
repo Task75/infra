@@ -3,6 +3,7 @@ terraform {
 
   backend "local" {
     path = "./infra/terraform.tfstate"
+  }
 
   required_providers {
     github = {
