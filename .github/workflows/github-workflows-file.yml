@@ -37,6 +37,10 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
+      - name: Import existing resources
+        run: |
+          terraform import github_repository.coffee_api coffee-api || true
+          
       - name: Terraform Plan
         run: terraform plan
 
