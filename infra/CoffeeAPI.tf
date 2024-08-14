@@ -61,6 +61,12 @@ resource "github_actions_secret" "postgresql_password" {
   plaintext_value = var.postgresql_password
 }
 
+resource "github_actions_secret" "TOKEN" {
+  repository      = github_repository.coffee_api.name
+  secret_name     = "TOKEN"
+  plaintext_value = var.github_token
+}
+
 # Add environment variables
 resource "github_actions_variable" "postgresql_username" {
   repository    = github_repository.coffee_api.name
