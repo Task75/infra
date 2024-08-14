@@ -21,7 +21,7 @@ jobs:
       TF_VAR_postgresql_password: ${{ secrets.POSTGRESQL_PASSWORD }}
       TF_VAR_postgresql_username: ${{ vars.POSTGRESQL_USERNAME }}
       TF_VAR_postgresql_basename: ${{ vars.POSTGRESQL_BASENAME }}
-      GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      TF_VAR_github_token: ${{ secrets.TOKEN }}
 
     steps:
       - name: Checkout code
