@@ -4,12 +4,6 @@ variable "repo_name_CoffeeAPI" {
   default     = "coffee-api"
 }
 
-variable "repo_name_Helm_Charts" {
-  description = "Base name of the repository"
-  type        = string
-  default     = "helm-charts"
-}
-
 variable "staging_branch_name" {
   description = "Name of the staging branch"
   type        = string
