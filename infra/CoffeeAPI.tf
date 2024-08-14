@@ -2,7 +2,7 @@
 resource "github_repository" "coffee_api" {
   name        = var.repo_name_CoffeeAPI
   description = "Repository for the Coffee API service"
-  private     = false
+  #private     = false
   visibility  = "public"
   has_issues  = true
   has_wiki    = true
